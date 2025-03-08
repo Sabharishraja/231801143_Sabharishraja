@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2 style="text-align: center;">SIGNUP FORM</h2>
+        <form id="signupForm">
+            <p>
+            <label>First Name:</label>
+            <input type="text" id="firstName" required placeholder="Enter First name" >
+            </p>
+            <p>
+            <label>Last Name:</label>
+            <input type="text" id="lastName" required placeholder="Enter Last name">
+            </p>
+            <p>
+            <label>Email:</label>
+            <input type="email" id="email" required placeholder="Enter Email" style="margin-left: 77px;"> 
+            </p>
+            <p>
+            <label>Date of Birth:</label>
+            <input type="date" id="dob" required style="margin-left: 28px;">
+            </p>
+            <p>
+            <label>Age:</label>
+            <input type="number" id="age" required placeholder="Enter Age" style="margin-left: 85px;">
+            </p>
+            <p>
+                <label for="Gender">Gender:</label><br>
+                <input type="radio" id="male" name="gender" value="male">Male<br>
+                <input type="radio" id="female" name="gender" value="female">female
+            </p>
+            <p>
+            <label>Phone Number:</label>
+            <input type="tel" id="phone" required placeholder="Enter Phone number" style="margin-left: 8px;">
+            </p>
+            <p>
+            <label>Address:</label>
+            <textarea id="address" required placeholder="Enter Address" style="margin-left: 58px;"></textarea>
+            </p>
+            <button type="button" onclick="validateForm()">Signup</button>
+        </form>
+        
+    </div>
+    
+    <script src="script.js"></script>    
+</body>
+</html>

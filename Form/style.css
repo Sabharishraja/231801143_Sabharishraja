@@ -1,0 +1,67 @@
+/* styles.css */
+body {
+    background-image: url("image.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 20px;
+}
+
+.container {
+    max-width: 650px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #8985c3;
+    overflow-x: auto; /* Enables horizontal scrolling if needed */
+}
+
+label {
+    display: inline;
+    margin-top: 20px;
+}
+
+input, textarea {
+    width: 50%;
+    padding: 6px;
+    border-color: black;
+    border-radius: 4px;
+    box-shadow: none;
+    margin-left: 40px;
+}
+
+button {
+    margin-left: 42%;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: blue;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    width: 15%;
+}
+
+.table-container {
+    max-width: 100%;
+    overflow-x: auto;
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed; /* Ensures proper table width inside container */
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+    word-wrap: break-word; /* Ensures text doesn't overflow */
+}
+
+th {
+    background-color: #ddd;
+}

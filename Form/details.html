@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submitted Details</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2 style="text-align: center;">Submitted Details</h2>
+        <table border="1" id="displayTable">
+            <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Email</th>
+                    <th>Date of Birth</th>
+                    <th>Age</th>
+                    <th>Gender</th>
+                    <th>Phone Number</th>
+                    <th>Address</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td id="firstName"></td>
+                    <td id="lastName"></td>
+                    <td id="email"></td>
+                    <td id="dob"></td>
+                    <td id="age"></td>
+                    <td id="gender"></td>
+                    <td id="phone"></td>
+                    <td id="address"></td>
+                </tr>
+            </tbody>
+        </table>
+        <button onclick="goBack()">Go Back</button>
+    </div>
+
+    <script>
+        function getCookie(name) {
+            let nameEQ = name + "=";
+            let cookiesArr = document.cookie.split(';');
+            for (let i = 0; i < cookiesArr.length; i++) {
+                let cookie = cookiesArr[i].trim();
+                if (cookie.indexOf(nameEQ) === 0) {
+                    return decodeURIComponent(cookie.substring(nameEQ.length, cookie.length));
+                }
+            }
+            return null;
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            document.getElementById("firstName").textContent = getCookie("firstName") || "N/A";
+            document.getElementById("lastName").textContent = getCookie("lastName") || "N/A";
+            document.getElementById("email").textContent = getCookie("email") || "N/A";
+            document.getElementById("dob").textContent = getCookie("dob") || "N/A";
+            document.getElementById("age").textContent = getCookie("age") || "N/A";
+            document.getElementById("gender").textContent = getCookie("gender") || "N/A";
+            document.getElementById("phone").textContent = getCookie("phone") || "N/A";
+            document.getElementById("address").textContent = getCookie("address") || "N/A";
+        });
+
+        function goBack() {
+            window.location.href = "index.html";
+        }
+    </script>
+</body>
+</html>
