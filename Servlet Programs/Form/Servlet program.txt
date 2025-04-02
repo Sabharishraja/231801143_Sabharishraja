@@ -1,0 +1,62 @@
+package com.sabharishraja.servlet;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+/**
+ * Servlet implementation class Displayuser
+ */
+@WebServlet("/Displayuser")
+public class Displayuser extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public Displayuser() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String a=request.getParameter("user");
+		String b=request.getParameter("age");
+		int age=Integer.parseInt(b);
+		PrintWriter p=response.getWriter();
+		if(a.isEmpty()) {
+			p.println("Username sholud not be empty !");
+		}
+		else if(age<1) {
+			p.println("Age should not be less than or equal to zero !");
+		}
+		else {
+			p.println("Username : "+a);
+			p.println("Age : "+age);
+		}
+		
+		
+	}
+
+	private int parseInt(String a) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		doGet(request, response);
+	}
+
+}

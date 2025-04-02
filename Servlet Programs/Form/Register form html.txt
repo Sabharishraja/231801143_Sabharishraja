@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Form</title>
+</head>
+<body>
+<center>
+<form action="/231801143/Displayuser" method="get" style="margin-top:350px">
+<label>Username : </label>
+<input type="text" name="user" placeholder="Enter Username"><br><br>
+<label>Age : </label>
+<input type="text" name="age" placeholder="Enter Age" required><br><br>
+<input type="submit" value="Sign in">
+</form>
+</center>
+</body>
+</html>
